@@ -1,4 +1,9 @@
-/*Mientras que el operador REST permite especificar argumentos indpendientes.
-El operador SPREAD permite especificar un arreglo que será separado,
-y cada item enviado será un argumento independiente a la funcion.
-*/
+//ECMAS 5
+var numeros = [1, 5, 43, 133, 4234, 4557];
+var valorMaximoNumeros = Math.max.apply( Math, numeros);
+console.log(valorMaximoNumeros);
+
+//ECMAS 6
+var numeros = [1, 5, 43, 133, 4234, 4557];
+var valorMaximoNumeros = Math.max(...numeros);
+console.log(valorMaximoNumeros);	
