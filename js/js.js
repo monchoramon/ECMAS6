@@ -15,3 +15,4 @@ operadorRest('Hola', 'Marcos', 'Daniel', 'Juan');
 let personas      = ['daniel', 'sandra', 'gonzalo', 'maria'];
 let otrasPersonas = [...personas, 'ramon', 'juan'];
 operadorSpread('Que tal!!', otrasPersonas);
+
