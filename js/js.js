@@ -1,23 +1,17 @@
-let persona1 = {
-    nombre: 'David',
-    edad: 33
-};
+//por separado
+function operadorRest(saludo, ...personas) {
+    for (i in personas) {
+        console.log(`${saludo} ${personas[i]}`);
+    }
+}
 
-let persona2 = {
-    nombre: 'Ramón',
-    edad: 100,
-    conduce: true,
-    tiene_vehiculo: true,
-    vegetariano: false,
-    casado: true
-};
+//Propagacion
+function operadorSpread(saludo, ...personas) {
+    console.log(`${saludo} ${personas}`);
+}
 
-persona1 = {
-    //padamos todo lo que tiene el objeto, persona2
-    ...persona2,
-    //conservando lo que tiene el objeto, persona1
-    ...persona1
-};
+operadorRest('Hola', 'Marcos', 'Daniel', 'Juan');
 
-
-console.log(persona1, persona2);
+let personas      = ['daniel', 'sandra', 'gonzalo', 'maria'];
+let otrasPersonas = [...personas, 'ramon', 'juan'];
+operadorSpread('Que tal!!', otrasPersonas);
