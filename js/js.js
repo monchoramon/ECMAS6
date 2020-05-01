@@ -66,7 +66,7 @@ var manejador1 = {
     }
 }
 
-console.log( manejador1 );
+console.log(manejador1);
 manejador1.init();
 
 /**********************************/
@@ -87,3 +87,21 @@ var manejador2 = {
 }
 
 manejador2.init();
+
+//Test
+var incrementos = ((valor_a_variable, valor_a_objeto) => {
+	var a = valor_a_variable;
+
+	var b = {
+		a: valor_a_objeto,
+    	b: /*
+    		Incremento desde que se crea la variable, no espera hasta el final del objeto, 
+    		si el incremento estuviera frgente a la variable a, se incrementaría hasta 
+    		el final, cuando el objeto ya estuviera creado por completo.
+    		*/
+    	++a
+	}
+
+	console.log(a, b.a, ++b.b);
+
+})(3,3);
