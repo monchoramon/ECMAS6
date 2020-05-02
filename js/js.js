@@ -1,11 +1,10 @@
 //Funciones de Flecha ó Arrow Functions
 var miFuncion2 = function(valor) {
-    return valor;
-}
+    console.log(valor);
+}(400);
 
 let miFuncion1 = (valor) => valor;
 
-console.log(miFuncion2('a'));
 console.log(miFuncion1('b'));
 
 var sumar2 = function(numeros) {
@@ -105,3 +104,28 @@ var incrementos = ((valor_a_variable, valor_a_objeto) => {
 	console.log(a, b.a, ++b.b);
 
 })(3,3);
+
+//funciones de flechas y arreglos
+
+var arreglo = [3,5,4,4,45,33,45,4,33];
+var arregloOrdenadoES5 = arreglo.sort(function(a,b){
+	return a-b;
+});
+
+let arregloOrdenadoES6 = arreglo.sort( (a,b) =>a-b );
+
+console.log(arregloOrdenadoES5, arregloOrdenadoES6);
+
+//Identificando funciones de tipo flecha y otros ejemplos
+
+ var restar = (a,b) => a-b;
+ console.log( typeof restar );
+ console.log( restar instanceof Function );
+
+ // var restarLlamada = new restar(1,2);
+
+var ejemplo = function(x,y) {
+ 	( (a,b) => {
+		console.log( arguments[0] );
+ 	})();
+}(10,20);
