@@ -118,3 +118,36 @@ console.log( objReceptor, objDonador );
 console.log( mezclar( objReceptor, objDonador ) );
 //ES6
 console.log( Object.assign( objReceptor, objDonador ) );
+
+//Orden de enumeración de las propiedades de los objetos
+/*
+	1. Todas las llaves van en orden ascendente.
+	2. Todas las llaves tipo string, van ordenadas en la manera que fueron
+	   agregadas al objeto.
+	3. Todos los símbolos en el orden que fueron agregados al objeto. 
+*/
+
+var objeto = {
+	c:1,
+	0:1,
+	x:1,
+	15:1,
+	r:1,
+	3:1,
+	b:1
+}
+
+objeto.d    = 1;
+objeto["2"] = 1;
+objeto["a"] = 1;
+objeto["z"]   = 1;
+
+console.log( Object.getOwnPropertyNames( objeto ).join(",") );
+console.log( Object.keys(objeto) );
+console.log( JSON.stringify(objeto) );
+
+var totalPropiedadesObjeto = Object.keys(objeto);
+
+for (i in totalPropiedadesObjeto ){
+	console.log(totalPropiedadesObjeto[i]);
+}
