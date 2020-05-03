@@ -27,7 +27,8 @@ var persona = {
 persona.getNombre();
 
 
-//Nombre de propiedades computadas o procesadas
+//Nombre de propiedades computadas o procesadas, las propiedades computadas
+//pueden tener funciones sin ningún problema [funcion()]
 
 var persona = {};
 var apellidos = "apellidos";
