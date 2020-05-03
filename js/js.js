@@ -92,3 +92,29 @@ console.log("==== 5 contra 5 ====");
 
 console.log(Object.is(5, 5));
 console.log(Object.is(5, "5"));
+
+//Nuevo método:Object.assign();
+
+var objReceptor = {};
+var objDonador  = {
+	// nombre:"mi-archivo.js",
+	// directorio:"C://mis_archivos"
+	get nombre() {
+		return "mi-archivo.js";
+	}
+}
+
+function mezclar (objReceptor, objDonador) {
+	Object.keys(objDonador).forEach( (key) => {
+		objReceptor[key] = objDonador[key];
+	});
+	console.log( Object.keys(objDonador) );
+	return objReceptor;
+}
+
+console.log( objReceptor, objDonador );
+
+//ES5
+console.log( mezclar( objReceptor, objDonador ) );
+//ES6
+console.log( Object.assign( objReceptor, objDonador ) );
