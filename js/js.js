@@ -87,3 +87,39 @@ let ajustes = {
 
 let {nombre, email, facebook, google, premium, twitter:cuentaTwit="ramamama", basketball=true} = ajustes;
 console.log( nombre, ajustes );
+
+//Destructuración de objetos anidados
+
+let autoGuardado = {
+	archivo:"app.js",
+	cursor:{
+		linea:7,
+		columna:16
+	},
+	ultimoArchivo:{
+		archivo:"index.html",
+		cursor:{
+			linea:8,
+			columna:20
+		}
+	},
+	otroNodo:{
+		subNodo:{
+			cursor:{
+				linea:11,
+				columna:11
+			}
+		}
+	}
+};
+
+let { cursor:cursorActivo } = autoGuardado;
+console.log( cursorActivo );
+
+let { ultimoArchivo:{ cursor:ultimoArchivoCursor } } = autoGuardado;
+console.log( ultimoArchivoCursor );
+
+let { otroNodo:{ subNodo:{ cursor:otroNodoSubNodoCursor } } } = autoGuardado;
+console.log( otroNodoSubNodoCursor );
+
+console.log( autoGuardado.otroNodo.subNodo.cursor );
