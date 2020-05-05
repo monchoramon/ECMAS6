@@ -73,3 +73,17 @@ let amigo = {
 Object.setPrototypeOf( amigo, persona );
 
 console.log( amigo.saludar() );
+
+//Destrucuración de objetos
+
+let ajustes = {
+	nombre:"Ramón Martínez Cruz",
+	email:"cruzcruzram@gmail.com",
+	facebook:"ramamam",
+	google:"ramamam123",
+	premium:true,
+	twitter:"ramamam321",
+};
+
+let {nombre, email, facebook, google, premium, twitter:cuentaTwit="ramamama", basketball=true} = ajustes;
+console.log( nombre, ajustes );
