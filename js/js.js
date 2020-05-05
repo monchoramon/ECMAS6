@@ -13,30 +13,63 @@
 	> Polimorfismo
 */
 
+//Cambiar el prototipo de un objeto
 var gato = {
 	sonido() {
 		console.log("miau!");
 	},
 	chillido() {
 		console.log("MIAU!!");
+	},
+	ronroneo(){
+		console.log("rrrrrrrrrrrrrrr");
 	}
 }
 
 var perro = {
 	sonido(){
 		console.log("guau!");
+	},
+	chillido(){
+		console.log("auuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu!!!");
 	}
 }
 
+//Herencia con la cadena de prototipos, 
 let angora = Object.create( gato );
 console.log( Object.getPrototypeOf( angora ) == gato );
 
 angora.sonido();
 angora.chillido();
+angora.ronroneo();
+
+console.log( "***Gato" );
 
 Object.setPrototypeOf( angora, perro );
+
+console.log( "***Perro" );
 
 console.log( Object.getPrototypeOf( angora ) == gato );
 
 angora.sonido();
 angora.chillido();
+//angora.ronroneo();
+
+//Acceso al prototipo con la referencia "SUPER"
+
+let persona = {
+	saludar() {
+		return "Hola";
+	}
+};
+
+let amigo = {
+	saludar(){
+		//return Object.getPrototypeOf(this).saludar.call(this)+", saludos!!!";
+		return super.saludar()+", saludos!!!";
+	}
+};
+
+Object.setPrototypeOf( amigo, persona );
+
+console.log( amigo.saludar() );
