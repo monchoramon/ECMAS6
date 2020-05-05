@@ -123,3 +123,66 @@ let { otroNodo:{ subNodo:{ cursor:otroNodoSubNodoCursor } } } = autoGuardado;
 console.log( otroNodoSubNodoCursor );
 
 console.log( autoGuardado.otroNodo.subNodo.cursor );
+
+//Destructuración de arreglos
+
+let frutas = ["platano", "uva", "fresa"];
+let [ fruta1, fruta2 ] = frutas;
+console.log( fruta1, fruta2 );
+
+let [,,fruta3] = frutas;
+console.log( fruta3 );
+
+let otraFruta = "Sandia";
+[ otraFruta ] = frutas;
+console.log( otraFruta );
+
+//Asignación de variables ejemplo en otros lenguajes
+let a = 1;
+let b = 2;
+let temp;
+
+temp = a;
+a = b;
+b = temp;
+
+console.log(a);
+console.log(b);
+
+//Asignación de variables en JS utilizando la destructuración de arreglos.
+
+[a,b] = [b,a];
+console.log(a);
+console.log(b);
+
+let arregloObjetos = 
+[
+	nombres = {
+		nombre1:"Ramón",
+		nombre2:"Juan",
+		nombre3:"Daniel"	
+	}
+	,
+	(function apellidos() {
+		var apellidos = {
+			apellido1:"Martínez",
+			apellido2:"Gomez",
+			apellido3:"Barragan"
+		}
+		console.log( apellidos );
+	})()
+	,
+	//Función anonima que se ejecuta cuando se ternuba de crear ES6;
+	((saludo, nombre) => {
+		alert(`${saludo} ${nombre}`);
+	})("Hola", "Ramón")
+	,
+
+];
+
+let [ objNombre, funcionApellidos, saludar ] = arregloObjetos;
+
+console.log( objNombre );
+funcionApellidos;
+saludar;
+
