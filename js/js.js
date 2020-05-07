@@ -186,3 +186,29 @@ console.log( objNombre );
 funcionApellidos;
 saludar;
 
+//Destructuración de arreglos anidados
+
+let colores1 = ["azul", ["verde", "blanco", "rojo"], "naranja"];
+let [color1, [color2] ] = colores1;
+
+console.log( color2 );
+
+let colores2 = ["rojo","verde","blanco","azul","gris","anaranjado"];
+let [colorPrincipal, colorSecundario, ...demasColores] = colores2;
+
+console.log( colorPrincipal );
+console.log( colorSecundario );
+console.log( demasColores );
+
+//Valores por defecto en la destructuración
+
+let frutasValoresPorDefecto = ["mango","aguacate"];
+let [ fruta1ValoresPorDefecto, fruta2ValoresPorDefecto = "pera" ] = frutasValoresPorDefecto;
+console.log( fruta1ValoresPorDefecto, fruta2ValoresPorDefecto );
+
+let opciones = {
+	nombreValoresPorDefecto:"Ramón"
+};
+
+let { nombreValoresPorDefecto:nombre1, apellidoValoresPorDefecto = "Martínez Cruz" } = opciones;
+console.log( nombre1, apellidoValoresPorDefecto );
