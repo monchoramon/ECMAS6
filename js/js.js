@@ -26,4 +26,6 @@ console.log (
 	          	personaApellidos[segundoApellido] 
 	        );
 
-console.log( typeof primerNombre );
+console.log( "Soy "+toString(primerNombre) );
+
+console.log( "primer nombre" in personaNombre );
