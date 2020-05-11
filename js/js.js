@@ -42,3 +42,18 @@ console.log(eliminarDuplicados( numeros ));
 function eliminarDuplicados( array ){
 	return [...new Set(array)];
 }
+
+//weekset
+/*
+Trabajan de una manera similar a los Sets.
+Características principales:
+1. En un weekset, ADD(), HAS(), REMOVE(), dan
+   un error si enviamos como parámetro algo que
+   no sea un objeto.
+2. No tiene manera de hacer repeticiones o ciclos for in.
+3. Los weeksets no tienen keys(), values(), por lo que 
+   no hay manera vía programaciónde saber cuantos elementos hay dentro.
+4. No tienen un for-each tampoco.
+5. No tienen propiedad size. 
+
+*/
