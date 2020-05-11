@@ -23,6 +23,7 @@ items.delete(7);
 items.clear();
 console.log(items);
 
+//Comparación Object.is( items );
 //forEach en los sets
 
 let personas = new Set(['Ramón', 'Perla', 'Maria', ['Daniel']]);
@@ -30,6 +31,7 @@ let personas = new Set(['Ramón', 'Perla', 'Maria', ['Daniel']]);
 personas.forEach(function(valor, llave, setOriginal) {
     console.log(valor, llave, setOriginal);
     console.log(valor === llave);
+    console.log( "Comparación ", Object.is( llave ) );
 });
 
 //Convertir un set en array
@@ -42,6 +44,8 @@ console.log(eliminarDuplicados( numeros ));
 function eliminarDuplicados( array ){
 	return [...new Set(array)];
 }
+
+console.log(new Set("Ramón"));
 
 //weekset
 /*
