@@ -29,5 +29,16 @@ let personas = new Set(['Ramón', 'Perla', 'Maria', ['Daniel']]);
 
 personas.forEach(function(valor, llave, setOriginal) {
     console.log(valor, llave, setOriginal);
-    console.log( valor === llave );
-})
+    console.log(valor === llave);
+});
+
+//Convertir un set en array
+
+let numeros = ["0", 1, 2, 3, 4, 5, 6, 7, 8, 9,7,7,7,7,1,2,3,4,5];
+console.log(eliminarDuplicados( numeros ));
+
+//Eliminar duplicados
+
+function eliminarDuplicados( array ){
+	return [...new Set(array)];
+}
