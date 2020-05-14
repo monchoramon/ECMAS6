@@ -51,4 +51,9 @@ mapa.forEach(
 	console.log(`${valor}`)
 )
 
-
+var persona = new Map( [ ["nombre","Ramón"], ["edad",26] ] );
+for (let per of persona) {
+	for (let p of per) {
+		console.log( p );
+	}
+}
