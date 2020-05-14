@@ -41,6 +41,14 @@ console.log( mapa );
 
 //Inicializaciones de los mapas
 
-var mapa = new Map( [ ["nombre","Ramón"], [undefined, function(fecha){ alert(`${fecha}`); }(new Date())] ] );
+var mapa = new Map( [ ["nombre","Ramón"], [undefined, function(fecha){ console.log(`${fecha}`); }(new Date())] ] );
 console.log( mapa );
 console.log( mapa.get(undefined) );
+
+var mapa = new Map([ ["nombre","Ramón Martínez"], ["edad", 26] ]);
+mapa.forEach( 
+	valor => 
+	console.log(`${valor}`)
+)
+
+
