@@ -1,5 +1,6 @@
-///Introduccion a las clases en JS
 
+
+///Introduccion a las clases en JS
 function Persona ( nombre ) {
 	this.nombre = nombre;
 
@@ -41,8 +42,8 @@ console.log( persona2 instanceof Object  );
 console.log( typeof Persona2  );
 console.log( typeof Persona2.prototype  );
 
-///Por qué usar la sintaxis de clases?
 
+///Por qué usar la sintaxis de clases?
 /* 
 	1. Las clases funcionan muy parecido a la declaración LET (Estan ahí hasta que la ejecución alcanza la declaración)
 	2. Todo el código dentro de la clase, funciona en modo stricto "strict mode"
@@ -53,8 +54,8 @@ console.log( typeof Persona2.prototype  );
 	7. Las clases tienen métodos estaticos y privados.
 */ 
 
-///Clases como expresiones.
 
+///Clases como expresiones.
 let miFuncion = function() {
 	console.log( "Hola mundo" );
 }
@@ -83,3 +84,9 @@ let persona3 = new Persona3();
 console.log( typeof Persona3);
 console.log( typeof persona3);
 console.log( persona3 instanceof Persona3);
+
+
+///Clases como párametros
+function creadorClases () {
+
+}
