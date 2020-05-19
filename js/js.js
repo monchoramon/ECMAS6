@@ -1,4 +1,4 @@
-//Introduccion a las clases en JS
+///Introduccion a las clases en JS
 
 function Persona ( nombre ) {
 	this.nombre = nombre;
@@ -19,7 +19,8 @@ var persona = Persona("Ramon");
 console.log( persona instanceof Persona  );
 console.log( persona instanceof Object  );
 
-//Declaración básica de una clase en ES6
+
+///Declaración básica de una clase en ES6
 class Persona2 {
 	
 	constructor( nombre ) {
@@ -40,7 +41,7 @@ console.log( persona2 instanceof Object  );
 console.log( typeof Persona2  );
 console.log( typeof Persona2.prototype  );
 
-//Por qué usar la sintaxis de clases?
+///Por qué usar la sintaxis de clases?
 
 /* 
 	1. Las clases funcionan muy parecido a la declaración LET (Estan ahí hasta que la ejecución alcanza la declaración)
@@ -51,3 +52,6 @@ console.log( typeof Persona2.prototype  );
 	6. Intentar renombrar el nombre de la clase dentro de algún método de la misma dará un error.
 	7. Las clases tienen métodos estaticos y privados.
 */ 
+
+///Clases como expresiones.
+
