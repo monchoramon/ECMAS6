@@ -39,3 +39,15 @@ console.log( persona2 instanceof Persona2  );
 console.log( persona2 instanceof Object  );
 console.log( typeof Persona2  );
 console.log( typeof Persona2.prototype  );
+
+//Por qué usar la sintaxis de clases?
+
+/* 
+	1. Las clases funcionan muy parecido a la declaración LET (Estan ahí hasta que la ejecución alcanza la declaración)
+	2. Todo el código dentro de la clase, funciona en modo stricto "strict mode"
+	3. Todos los métodos no son enumerables.
+	4. Todos los métodos internos, no tienen un constructor.
+	5. Lllamar una clase sin el "new" dará un error.
+	6. Intentar renombrar el nombre de la clase dentro de algún método de la misma dará un error.
+	7. Las clases tienen métodos estaticos y privados.
+*/ 
