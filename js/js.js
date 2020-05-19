@@ -55,3 +55,31 @@ console.log( typeof Persona2.prototype  );
 
 ///Clases como expresiones.
 
+let miFuncion = function() {
+	console.log( "Hola mundo" );
+}
+
+let otraFuncion = miFuncion;
+
+console.log( typeof otraFuncion );
+
+otraFuncion();
+
+
+let Persona3 = class {
+	constructor() {
+		this.nombre = "Monica";
+		this.edad = 29;
+		this.direccion = "lorem ipsum dolor sit amet LOREM IPSUM DOLOR SIT AMET";
+	}
+
+	decirNombre() {
+		console.log(this.nombre, this.edad , this.direccion);
+	}
+}
+
+let persona3 = new Persona3();
+
+console.log( typeof Persona3);
+console.log( typeof persona3);
+console.log( persona3 instanceof Persona3);
