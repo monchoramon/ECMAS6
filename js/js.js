@@ -12,8 +12,8 @@ Persona.prototype.decirNombre = function() {
 	console.log( this.nombre );
 }
 
-console.log( Persona.prototype );
+var persona = Persona("Ramon");
+//persona.decirNombre();
+//persona.gritarNombre();
 
-var persona = new Persona("Ramon");
-persona.decirNombre();
-persona.gritarNombre();
+console.log( persona instanceof Persona  );
