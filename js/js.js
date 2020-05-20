@@ -87,6 +87,44 @@ console.log( persona3 instanceof Persona3);
 
 
 ///Clases como párametros
-function creadorClases () {
+function creadorClases( definicionClase ) {
+	return new definicionClase;
+}
+
+let objeto = creadorClases(
+	class {
+		constructor(){
+			this.nombre = undefined;
+			this.edad = 30;
+		}
+
+		saludar() {
+			console.log("Hola!");
+		}
+	}
+);
+
+objeto.saludar();
+
+class Cuadrado {
+
+	constructor(lado) {
+		this.lado = lado;
+	}
+
+	getArea(){
+		return this.lado * this.lado;
+	}
 
 }
+
+function imprimirCuadrado(cuadrado) {
+	if ( !(cuadrado instanceof Cuadrado) ){
+		console.error("El parametro enviado no es un cuadrado");
+		return;
+	}
+	console.log( cuadrado.getArea() );
+}
+
+let cuadrado = 123;
+imprimirCuadrado(cuadrado);
