@@ -5,7 +5,7 @@
 let nombreMetodo = "gritarNombre";
 
 class Persona {
-	
+
 	constructor(nombre){
 		this.nombre = nombre;
 	}
@@ -13,6 +13,7 @@ class Persona {
 	decirNombre(){
 		console.log( this.nombre );
 	}
+
 
 	[nombreMetodo]() {
 		console.log(this.nombre.toUpperCase() );
@@ -26,3 +27,19 @@ class Persona {
 
 let nombre = Persona.crear("Ramón");
 console.log( nombre );
+
+class Figura{
+	
+ constructor(lado){
+     this.lado = lado;
+ }
+ 
+  obtenerVentana(){
+   return super();
+  }
+
+}
+ 
+let figura = new Figura();
+ 
+console.log( figura.obtenerVentana() );
