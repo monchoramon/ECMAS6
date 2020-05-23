@@ -28,18 +28,56 @@ class Persona {
 let nombre = Persona.crear("Ramón");
 console.log( nombre );
 
-class Figura{
+
+//Herencia de clases 
+
+class Rectangulo {
+	constructor(alto, largo) {
+		this.alto  = alto;
+		this.largo = largo;
+	}
+
+	getArea() {
+		return (this.alto * this.largo);
+	}
+
+}
+
+let rectangulo = new Rectangulo(4,5);
+
+class Cuadrado extends Rectangulo {
+
+	constructor(alto) {
+		super( alto, alto );
+	}
+
+	getArea() {
+	    return [
+	    	{ "Cuadrado, area: ":   (this.alto * this.alto) },
+	    	{ "Rectangulo, area: ": super.getArea() }
+	    ]
+	}
+
+}
+
+let cuadrado = new Cuadrado(3);
+
+console.log( cuadrado.getArea() );
+console.log( cuadrado instanceof Cuadrado );
+console.log( cuadrado instanceof Rectangulo );
+
+
+class Figura {
 	
- constructor(lado){
+ constructor(lado) {
      this.lado = lado;
  }
  
   obtenerVentana(){
-   return super();
+    //return super();
   }
 
 }
  
 let figura = new Figura();
- 
-console.log( figura.obtenerVentana() );
+//console.log( figura.obtenerVentana() );
