@@ -11,7 +11,7 @@ const getNombre = async() => {
 }
 
 
-const saludo = () => {
+const saludo = async() => {
 	const nombre = await getNombre();
 	return `Hola ${nombre}`;
 }
