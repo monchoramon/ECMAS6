@@ -1,83 +1,29 @@
-//Profundizando en las clases
+//Promesas ES6
+/*Problematica*/
 
-//Los metodos computados son nombres los cuales se pueden 
-//defini por medio de una variable.
-let nombreMetodo = "gritarNombre";
+function tareaAsincrona() {
 
-class Persona {
+	let promesa = new Promise( (resolve, reject) => {
 
-	constructor(nombre){
-		this.nombre = nombre;
-	}
+		setTimeout(function(){
+			console.log( "Proceso Asincrono terminado" );
+			resolve();
+		}, 3000)
 
-	decirNombre(){
-		console.log( this.nombre );
-	}
+	});
 
-
-	[nombreMetodo]() {
-		console.log(this.nombre.toUpperCase() );
-	}
-
-	static crear( nombre ) {
-		return new Persona(nombre);
-	}
+	return promesa;
 
 }
 
-let nombre = Persona.crear("Ramón");
-console.log( nombre );
+tareaAsincrona().then( resolve() );
 
+console.log("Código secuencial");
 
-//Herencia de clases 
-
-class Rectangulo {
-	constructor(alto, largo) {
-		this.alto  = alto;
-		this.largo = largo;
-	}
-
-	getArea() {
-		return (this.alto * this.largo);
-	}
-
+function resolve() {
+	console.log("Todo OK!!!");
 }
 
-let rectangulo = new Rectangulo(4,5);
-
-class Cuadrado extends Rectangulo {
-
-	constructor(alto) {
-		super( alto, alto );
-	}
-
-	getArea() {
-	    return [
-	    	{ "Cuadrado, area: ":   (this.alto * this.alto) },
-	    	{ "Rectangulo, area: ": super.getArea() }
-	    ]
-	}
-
+function reject() {
+	console.error("Todo MAOL!!!");
 }
-
-let cuadrado = new Cuadrado(3);
-
-console.log( cuadrado.getArea() );
-console.log( cuadrado instanceof Cuadrado );
-console.log( cuadrado instanceof Rectangulo );
-
-
-class Figura {
-	
- constructor(lado) {
-     this.lado = lado;
- }
- 
-  obtenerVentana(){
-    //return super();
-  }
-
-}
- 
-let figura = new Figura();
-//console.log( figura.obtenerVentana() );
